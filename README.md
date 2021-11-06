@@ -2,4 +2,4 @@
 
 Viikkoraportit
 
-[Viikko 1](dokumentaatio/viikko 1.txt)
+[Viikko 1](dokumentaatio/viikko 1.md)

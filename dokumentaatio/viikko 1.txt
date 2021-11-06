@@ -6,6 +6,7 @@ Projektia ei ole vielä täysin luotu ja toteutan sen mielummin ensi viikolla.
 Suuri osa gitin käytöstä oli hyvää kertausta. Opittua ei tullut paljoa muuta kuin sudokun ratkaisuun liittyvää.
 
 Ongelmana oli etten tiedä miten arvioisuin ohjelman aika- ja tilavaativuutta.
+En myöskään saanut toimimaan parempaa tapaa linkata viikkoraportteja readme tiedostoon että ne näkyisivät paremmin.
 
 Ensi viikolla luon projektin ja pyrin tilanteeseen missä mahdollisesti perustason ns. 'naivi' sudokun ratkaisu löytyisi.
 

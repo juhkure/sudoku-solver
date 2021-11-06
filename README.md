@@ -1,5 +1,5 @@
 # sudoku-solver
 
-Viikkoraportit
+Viikkoraportit.
 
-* [Viikko 1](dokumentaatio/viikko 1.md)
+* [Viikko 1](dokumentaatio/viikko 1.txt)

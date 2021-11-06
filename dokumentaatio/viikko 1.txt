@@ -1,7 +1,7 @@
 Ensimmäisellä viikolla projektin luonti githubissa. Käyttäjän luonti ja muiden tarvittavien perusasioiden kertaus.
 Määrittelydokumentti pääosin valmis. Voi olla että joitakin muutoksia tulee myöhemmin projektin edetessä.
 
-Projektia ei ole vielä täysin luotu ja toteutan sen mielummin ensi viikolla.
+Projektia ei ole vielä täysin luotu ja toteutan sen mielumin ensi viikolla.
 
 Suuri osa gitin käytöstä oli hyvää kertausta. Opittua ei tullut paljoa muuta kuin sudokun ratkaisuun liittyvää.
 

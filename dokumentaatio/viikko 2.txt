@@ -1,0 +1,3 @@
+Tokalla viikolla todettiin että sudoku solver ei ole tarpeeksi haastava projekti, joten vaihoin aihetta jonka takia tämäkin
+palautus jää hieman pienemmäksi. Aika paljon tuntui uppoavan aikaa uuden projektin keksimiseen. Lopulta totesin että kirjoitusvirheiden 
+korjaaja voisi olla mielenkiintoinen ja sopivan haasteellinen.

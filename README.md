@@ -1,4 +1,4 @@
-# sudoku-solver
+# typo-corrector
 
 Viikkoraportit.
 

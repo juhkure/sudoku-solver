@@ -8,3 +8,5 @@ ajatuksia ja suunnitelmia (vaihtuvat projektin edetessä)
 Ohjelma vielä suunnitteluvaiheillaan sillä hieman vaikeuksia miettiä järkevää rakennetta paketeille ja luokille.
 
 Ensi viikolla viimeistään tulee ohjelmasta löytymään konkreettista koodia. Todennäköisesti liittyen kirjaston lataamiseen.
+
+Tunnit: ~7h

@@ -3,16 +3,12 @@ Ohjelmointikielenä käytetään Javaa, en usko hallitsevani muita kieliä viel�
 Projekti muuttui kesken kaiken. Nyt aiheena onkin kirjoitusvirheiden korjaus. Tarkoituksena olisi laatia ohjelma jolle syötetään pätkä tekstiä 
 joka käy läpi ja korjaa havaitut kirjoitusvirheet.
 
+Pintapuolisesti; ohjelma ensin tarkistaa valmiin sanakirjan avulla kuuluuko löytyykö tutkittavan tekstin jokainen sana sanakirjasta. 
+Kuulumattomat sanat luokitellaan kirjoitusvirheiksi ja Damerau-Levenshtein -etäisyyden avulla laskee todennäköisimmän oikean sanan 
+kirjoitusvirheen tilalle.
 
-Tarkoituksena on käyttää rekursiivisesti ns. backtrackingia hyväksi käyttävää algoritmia joka kykenee 
-vääräänlaiseen tilaan tultaessa perääntymään aikaisempiin tiloihin ja yrittäen eri numeroita seuraavissa solussa.
-
-Nimestäkin päätellen tarkoitus on algoritmilla löytää tietyn perinteisen sudoku pelin ratkaisu.
-
-Lähtökohtaisesti ohjelma saa integer matriisin jonkun sudokun lähtötilanteesta ja yrittää löytää sille ratkaisun. On mahdollista että tämä on hieman pintapuolista, joten tavoitteena ohjelma sisältää käyttöliittymän johon käyttäjä lisää halutun ratkaistavan sudokun ja yrittää sitä ensin itse. Tämän jälkeen haluttaessa ohjelma ratkaisee sudokun loppuun (pienellä visuaalisella esityksellä).
-
-Aikavaativuus: O(9^(n^2)) (lähteenä https://www.geeksforgeeks.org/sudoku-backtracking-7/ sillä en ole täysin varma miten nämä laskettaisiin)
-Tilavaativuus: O(n^2)
+Aikavaativuus: O(S*D*M*N) jossa S on syötteen pituus, D on sanakirjan pituus, M on pisin sana syötteessä ja N pisin sana sanakirjassa. 
+Tilavaativuus: O(S + D) jossa S on syötteen pituus, D on sanakirjan pituus.
 
 Opinto-ohjelma: tietojenkäsittelytieteen kandidaatti
 

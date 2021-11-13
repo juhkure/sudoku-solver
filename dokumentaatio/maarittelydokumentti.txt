@@ -1,6 +1,11 @@
 Ohjelmointikielenä käytetään Javaa, en usko hallitsevani muita kieliä vielä niin että kykenisin niitä tarkemmin vertaisarvioimaan.
 
-Tarkoituksena on käyttää rekursiivisesti ns. backtrackingia hyväksi käyttävää algoritmia joka kykenee vääräänlaiseen tilaan tultaessa perääntymään aikaisempiin tiloihin ja yrittäen eri numeroita seuraavissa solussa.
+Projekti muuttui kesken kaiken. Nyt aiheena onkin kirjoitusvirheiden korjaus. Tarkoituksena olisi laatia ohjelma jolle syötetään pätkä tekstiä 
+joka käy läpi ja korjaa havaitut kirjoitusvirheet.
+
+
+Tarkoituksena on käyttää rekursiivisesti ns. backtrackingia hyväksi käyttävää algoritmia joka kykenee 
+vääräänlaiseen tilaan tultaessa perääntymään aikaisempiin tiloihin ja yrittäen eri numeroita seuraavissa solussa.
 
 Nimestäkin päätellen tarkoitus on algoritmilla löytää tietyn perinteisen sudoku pelin ratkaisu.
 

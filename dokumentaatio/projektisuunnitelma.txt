@@ -1,0 +1,14 @@
+Hieman ajatuksia ja suunnittelua toteutuksen puolesta koottuna.
+
+Projektin paketit: vertailija, pääohjelma, käyttöliittymä (mahdollisesti vain kaksi pakettia, sillä käyttöliittymä ei välttämättä tarvitse 
+kuin yhden oman luokan)
+
+Vertailija paketin sisältö:
+tarkastaja (Isompi kokonaisuus luokkana joka yhdistää useempia funktioita yhteen. Annetaan String syöte joka tarkastetaan. Palauttaa korjatun 
+version syötteestä)
+sananOikeellisuus (Tarkastaa yhden annetun sanan oikeellisuden. Palauttaa saman sanan mikäli oikein tai lähettää eteenpäin sananKorjaajalle.)
+sananKorjaaja (Ottaa vastaan kirjoitusvirheen sisältävän sanana ja palauttaa korjatun version.)
+
+Käyttöliittymä paketin sisältö:
+UI (sisältää käyttöliittymän logiikan)
+Main

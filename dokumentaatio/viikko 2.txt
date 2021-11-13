@@ -1,3 +1,10 @@
 Tokalla viikolla todettiin että sudoku solver ei ole tarpeeksi haastava projekti, joten vaihoin aihetta jonka takia tämäkin
 palautus jää hieman pienemmäksi. Aika paljon tuntui uppoavan aikaa uuden projektin keksimiseen. Lopulta totesin että kirjoitusvirheiden 
 korjaaja voisi olla mielenkiintoinen ja sopivan haasteellinen.
+
+Tein netbeansissä projektin typo-corrector nimellä. Korjasin dokumentaatiota ja lisäsin extrana projektisuunnitelman joka sisältää hieman 
+ajatuksia ja suunnitelmia (vaihtuvat projektin edetessä)
+
+Ohjelma vielä suunnitteluvaiheillaan sillä hieman vaikeuksia miettiä järkevää rakennetta paketeille ja luokille.
+
+Ensi viikolla viimeistään tulee ohjelmasta löytymään konkreettista koodia. Todennäköisesti liittyen kirjaston lataamiseen.

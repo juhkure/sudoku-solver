@@ -7,4 +7,4 @@
 [Viikko 2](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/viikko%202.txt)
 
 
-### [Projektisuunnitelma]()
+##### [Projektisuunnitelma](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/projektisuunnitelma.txt)

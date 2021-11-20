@@ -4,6 +4,9 @@ asetin tavoitteekseni sanakirjan toiminnallisuuden koodaus ja tämä onnistui yl
 
 Opin ainakin trie tietorakenteen suhteellisen hyvin.
 
+Ongelmia: Vielä en ole tehnyt testejä, hieman epäselvää kuinka ne toteutettaisiin ja testausdokumentin sisältö tästä johtuen epäselvä 
+ja jäi tekemättä
+
 Ensi viikolla tavoitteena paneutua damerau-levenshtein tietorakenteeseen ja mahdollisesti saada valmiiksi jonkin sortin sanan tarkastus toiminto.
 
 Työtunteja: ~7h

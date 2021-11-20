@@ -9,6 +9,15 @@ repositories {
     jcenter()
 }
 
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
 dependencies {
     testCompile 'junit:junit:4.12'
 }
+
+check.dependsOn jacocoTestReport

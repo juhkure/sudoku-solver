@@ -1,11 +1,12 @@
 Ohjelmointikielenä käytetään Javaa, en usko hallitsevani muita kieliä vielä niin että kykenisin niitä tarkemmin vertaisarvioimaan.
 
-Projekti muuttui kesken kaiken. Nyt aiheena onkin kirjoitusvirheiden korjaus. Tarkoituksena olisi laatia ohjelma jolle syötetään pätkä tekstiä 
-joka käy läpi ja korjaa havaitut kirjoitusvirheet.
+Projekti muuttui kesken kaiken. Nyt aiheena onkin kirjoitusvirheiden korjaus. Tarkoituksena olisi laatia ohjelma jolle syötetään englanninkielinen 
+pätkä tekstiä joka käy läpi ja korjaa havaitut kirjoitusvirheet.
 
 Pintapuolisesti; ohjelma ensin tarkistaa valmiin sanakirjan avulla kuuluuko löytyykö tutkittavan tekstin jokainen sana sanakirjasta. 
 Kuulumattomat sanat luokitellaan kirjoitusvirheiksi ja Damerau-Levenshtein -etäisyyden avulla laskee todennäköisimmän oikean sanan 
-kirjoitusvirheen tilalle.
+kirjoitusvirheen tilalle. Ohjelma myös käyttää trie -tietorakennetta hyödyksi lisäämällä siihen käytettävän sanakirjan sanat. Tämä mahdollistaa 
+testattavien sanojen tehokkaan vertailun sanakirjan sanoihin.
 
 Aikavaativuus: O(S*D*M*N) jossa S on syötteen pituus, D on sanakirjan pituus, M on pisin sana syötteessä ja N pisin sana sanakirjassa. 
 Tilavaativuus: O(S + D) jossa S on syötteen pituus, D on sanakirjan pituus.
@@ -13,4 +14,5 @@ Tilavaativuus: O(S + D) jossa S on syötteen pituus, D on sanakirjan pituus.
 Opinto-ohjelma: tietojenkäsittelytieteen kandidaatti
 
 Dokumentointikieli: suomi
-Koodissa pääosin käytössä suomenkieli, voi löytyä vaihtelevuutta englannin kanssa.
+Koodissa pääosin käytössä suomenkieli, voi löytyä vaihtelevuutta englannin kanssa. Ohjelma itsessään tosiaan suorittaa oikeinkirjoitusta 
+englanninkielisille teksteille ja sanoille. Saatan lisätä lopuksi tarkistuksen myös suomenkielelle.

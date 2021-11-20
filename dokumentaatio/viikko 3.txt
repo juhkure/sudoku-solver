@@ -1,0 +1,9 @@
+Tällä viikolla projekti sai aika paljon selkeyttä omissa ajatuksissa. Sain toteutettua trie tietorakenteen johon lisään sanakirjan sanat. 
+Tämä mahdollistaa syötettyjen sanojen vertailemisen sanakirjan sanoihin tehokkaasti. Olen tyytyväinen siihen mitä sain aikaiseksi, sillä 
+asetin tavoitteekseni sanakirjan toiminnallisuuden koodaus ja tämä onnistui yllättävän hyvin.
+
+Opin ainakin trie tietorakenteen suhteellisen hyvin.
+
+Ensi viikolla tavoitteena paneutua damerau-levenshtein tietorakenteeseen ja mahdollisesti saada valmiiksi jonkin sortin sanan tarkastus toiminto.
+
+Työtunteja: ~7h

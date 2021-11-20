@@ -1,7 +1,8 @@
-apply plugin: 'java'
-apply plugin: 'jacoco'
-apply plugin: 'application'
-
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'application'
+}
 
 mainClassName = 'typo.corrector.Main'
 
@@ -16,8 +17,14 @@ jacocoTestReport {
     }
 }
 
+check.dependsOn jacocoTestReport
+
 dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-check.dependsOn jacocoTestReport
+jar {
+    manifest {
+        attributes 'Main-Class': 'typo.corrector.Main'
+    }
+}

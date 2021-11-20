@@ -20,7 +20,11 @@ jacocoTestReport {
 check.dependsOn jacocoTestReport
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
+}
+
+run {
+    standardInput = System.in
 }
 
 jar {

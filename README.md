@@ -8,5 +8,7 @@
 
 [Viikko 3](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/viikko%203.txt)
 
+[Viikko 4-5](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/viikko%204-5.txt)
+
 
 [Projektisuunnitelma](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/projektisuunnitelma.txt)

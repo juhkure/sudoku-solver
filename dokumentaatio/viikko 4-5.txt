@@ -1,0 +1,14 @@
+Yritin tehdä testejä ja huomasin ettei ohjelma toimi halutulla tavalla. Pitkän pohdinnan jälkeen huomasin että käytetty tekstitiedoston sisältämät sanat 
+ovatkin sekavasti listattu. (Osa sanoista kokonaan isoilla kirjaimilla ja osa ei). Korjatakseni tämän tein niin että ohjelma tarkastaessa muuttaa sanat pieniksi 
+kirjaimiksi, jolloinka ohjelma toimii nyt taas halutulla tavalla.
+
+Vaihoin koodin kielen pääosin englanniksi, huomasin että se on mukavempi vaihtoehto.
+
+Ongelmia: Alunperin oli suunnitelmana että tekisin pienen graafisen käyttöliittymän javafx:n avulla, mutta netbeansin takia en ole saanut tätä useiden yrityksien jälkeen toimimaan, 
+joten ajattelin antaa tämän asian toistaiseksi olla.
+
+Aloitin dictionary luokkaa joka alustaa sanakirjan ja osaa tarkastaa mitkä sanat kuuluvat sanakirjaan ja mitkä ei annetussa syötteessä. Vielä 
+se ei korjaa virheellisiä sanoja ja metodi fix() tulee tämän tekemään. Sitä sitten seuraavaksi. Tämä käsitteleekin valitsemaani Damerau-Levenshtein algoritmia ja tähän 
+kuluu seuraavien viikkojen aika.
+
+Työtunteja: 10h

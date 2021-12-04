@@ -8,23 +8,27 @@ import java.util.HashMap;
  */
 public class TrieNode {
 
-    private final HashMap<Character, TrieNode> lapset;
-    private String sisalto;
-    private boolean sananLoppu;
+    private final HashMap<Character, TrieNode> children;
+    private boolean wordEnd;
 
     public TrieNode() {
-        this.lapset = new HashMap<>();
+        this.children = new HashMap<>();
+//        wordEnd = false;
     }
 
-    public boolean onSananLoppu() {
-        return sananLoppu;
+    public boolean isWordEnd() {
+        return wordEnd;
     }
 
-    public HashMap<Character, TrieNode> getLapset() {
-        return lapset;
+    public HashMap<Character, TrieNode> getChildren() {
+//        if (children.isEmpty()) {
+//            return null;
+//        } else {
+            return children;
+//        }
     }
 
-    public void setSananLoppu(boolean b) {
-        this.sananLoppu = b;
+    public void setWordEnd(boolean wordEnd) {
+        this.wordEnd = wordEnd;
     }
 }

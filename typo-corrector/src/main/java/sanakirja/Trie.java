@@ -8,73 +8,103 @@ import java.util.HashMap;
  */
 public class Trie {
 
-    private TrieNode juuri;
+    private TrieNode root;
+    static final int ALPHABET_SIZE = 26;
 
     public Trie() {
-        this.juuri = new TrieNode();
+        this.root = new TrieNode();
     }
 
-    public void lisaa(String word) {
-        TrieNode nykyinen = juuri;
+    public void add(String word) {
+        TrieNode current = root;
 
-        for (char s : word.toCharArray()) {
-            nykyinen = nykyinen.getLapset().computeIfAbsent(s, c -> new TrieNode());
+        for (char s : word.toLowerCase().toCharArray()) {
+            HashMap<Character, TrieNode> children = current.getChildren();
+            if (children.containsKey(s)){
+                current = children.get(s);
+            } else {
+                children.put(s, new TrieNode());
+                current = children.get(s);
+            }
+            
+//            current = current.getChildren().computeIfAbsent(s, c -> new TrieNode());
+//            current.getChildren().computeif
         }
 
-        nykyinen.setSananLoppu(true);
+        current.setWordEnd(true);
 
     }
+    
+    
+    public void add2(String key){
+        int level;
+        int length = key.length();
+        int index;
+        
+        TrieNode pCrawl = root;
+    }
+    
 
-    public boolean poista(String sana) {
-        return poista(juuri, sana, 0);
+    public boolean remove(String word) {
+        return remove(root, word, 0);
     }
 
-    private boolean poista(TrieNode nykyinen, String sana, int i) {
-        if (i == sana.length()) {
-            if (!nykyinen.onSananLoppu()) {
+    private boolean remove(TrieNode current, String word, int i) {
+        if (i == word.length()) {
+            if (!current.isWordEnd()) {
                 return false;
             }
 
-            nykyinen.setSananLoppu(false);
-            return nykyinen.getLapset().isEmpty();
+            current.setWordEnd(false);
+            return current.getChildren().isEmpty();
         }
 
-        char c = sana.charAt(i);
-        TrieNode node = nykyinen.getLapset().get(c);
+        char c = word.charAt(i);
+        TrieNode node = current.getChildren().get(c);
 
         if (node == null) {
             return false;
         }
 
-        boolean poistaNykyinenNode = poista(node, sana, i + 1) && !node.onSananLoppu();
+        boolean removeCurrentNode = remove(node, word, i + 1) && !node.isWordEnd();
 
-        if (poistaNykyinenNode) {
-            nykyinen.getLapset().remove(c);
-            return nykyinen.getLapset().isEmpty();
+        if (removeCurrentNode) {
+            current.getChildren().remove(c);
+            return current.getChildren().isEmpty();
         }
 
         return false;
     }
 
     public boolean isEmpty() {
-        return juuri == null;
+        return root == null;
     }
 
-    public boolean sisaltaaSanan(String sana) {
-        TrieNode nykyinen = juuri;
+    public boolean containsWord(String word) {
+        word = word.toLowerCase();
+        TrieNode current = root;
 
-        for (int i = 0; i < sana.length(); i++) {
-            char c = sana.charAt(i);
-            TrieNode node = nykyinen.getLapset().get(c);
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+//            System.out.println(c);
+            TrieNode node = current.getChildren().get(c);
 
             if (node == null) {
                 return false;
             }
 
-            nykyinen = node;
+            current = node;
         }
+        
+        System.out.println(current.isWordEnd());
+//        System.out.println(String.join(",",current.getChildren().keySet().toArray()));
+        
+//        for (Character character : current.getChildren().keySet()) {
+//            System.out.println(character);
+//            
+//        }
 
-        return nykyinen.onSananLoppu();
+        return current.isWordEnd();
     }
 
 }

@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'jacoco'
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
 }
 
 mainClassName = 'typo.corrector.Main'
@@ -31,4 +32,9 @@ jar {
     manifest {
         attributes 'Main-Class': 'typo.corrector.Main'
     }
+}
+
+javafx {
+    version = "17"
+    modules = [ 'javafx.controls' ]
 }

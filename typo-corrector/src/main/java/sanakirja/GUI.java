@@ -1,10 +1,12 @@
 
+
 package sanakirja;
+import javafx.animation.*;
 
 /**
  *
  * @author juhku
  */
-public class SananKorjaaja {
+public class GUI {
 
 }

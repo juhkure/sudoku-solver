@@ -96,7 +96,7 @@ public class Trie {
             current = node;
         }
         
-        System.out.println(current.isWordEnd());
+//        System.out.println(current.isWordEnd());
 //        System.out.println(String.join(",",current.getChildren().keySet().toArray()));
         
 //        for (Character character : current.getChildren().keySet()) {

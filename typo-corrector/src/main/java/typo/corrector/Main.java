@@ -17,45 +17,26 @@ import sanakirja.*;
 public class Main {
 
     public static void main(String[] args) {
-        // Trie trie = new Trie();
-        //
-        // trie.lisaa("hi");
-        // trie.lisaa("how");
-        // trie.lisaa("are");
-        // trie.lisaa("you");
-        //
-        // if (trie.sisaltaaSanan("you")) {
-        // System.out.println("sisaltaa");
-        // } else {
-        // System.out.println("ei sisalla");
-        // }
-        //
-        // trie.poista("on");
-        //
-        // if (trie.sisaltaaSanan("on")) {
-        // System.out.println("sisaltaa");
-        // } else {
-        // System.out.println("ei sisalla");
-        // }
-        //
-        // System.out.println("projekti toimii! (kai...)");
-        // System.out.println("");
 
-        // Trie sanakirja = new Trie();
-        //
-        // Scanner lukija = new Scanner(new File("src/resources/words.txt"));
-        //
-        // while (lukija.hasNextLine()) {
-        // sanakirja.lisaa(lukija.nextLine());
-        // }
-        //
         Dictionary dictionary = new Dictionary();
         dictionary.prepareDictionary();
 
-        String repairable = "hi how are you today how you're your";
-        String repaired = dictionary.check(repairable);
+        System.out.println("Correctable text: ");
 
+        Scanner scanner = new Scanner(System.in);
+        String repairable = scanner.nextLine();
+        
+        Long startTime = System.nanoTime();
+        
+
+        String repaired = dictionary.check(repairable);
+        
+        Long stopTime = System.nanoTime();
+
+        System.out.println("\nCorrected version: ");
         System.out.println(repaired);
+        
+        System.out.println("Time passed: " + (double)(stopTime - startTime)/1000000000 + " seconds");
 
     }
 

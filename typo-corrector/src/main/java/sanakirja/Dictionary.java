@@ -27,24 +27,83 @@ public class Dictionary {
         String[] words = repairable.split(" ");
         String repaired = "";
         for (String word : words) {
+
+            //checks if word ends with punctuation mark
+            char lastChar = word.charAt(word.length() - 1);
+            boolean isPunctuationMark = false;
+            if (lastChar == '!' || lastChar == '.' || lastChar == '?' || lastChar == ',') {
+                word = word.substring(0, word.length() - 1);
+                isPunctuationMark = true;
+            }
+
             if (!dictionary.containsWord(word)) {
                 word = fix(word);
             }
-            repaired += word + " ";
+            if (isPunctuationMark) {
+                repaired += word + lastChar + " ";
+            } else {
+                repaired += word + " ";
+            }
         }
 
         return repaired;
     }
 
-    private String fix(String word) {
-        int distance = 1000;
+    public String fix(String word) {
+        int lowestDistance = Integer.MAX_VALUE;
+        String fixedWord = "";
 
-        System.out.println(word);
-        return word;
+        for (String dictionaryWord : dictionaryWords) {
+            int calculatedDistance = distance(word, dictionaryWord);
+            if (calculatedDistance < lowestDistance) {
+                fixedWord = dictionaryWord;
+                lowestDistance = calculatedDistance;
+            }
+        }
+
+        System.out.println("\nUnrecognized word: " + word);
+        System.out.println("Corrected to: " + fixedWord);
+        return fixedWord;
+    }
+
+    /*
+        Damerau-Levenshtein algorithm
+     */
+    public int distance(String typo, String comparison) {
+        int inputLength = typo.length();
+        int comparisonLength = comparison.length();
+
+        int[][] dist = new int[inputLength + 1][comparisonLength + 1];
+        for (int i = 0; i < inputLength + 1; i++) {
+            dist[i][0] = i;
+        }
+        for (int j = 0; j < comparisonLength + 1; j++) {
+            dist[0][j] = j;
+        }
+
+        for (int i = 1; i < inputLength + 1; i++) {
+            for (int j = 1; j < comparisonLength + 1; j++) {
+
+                int cost;
+                if (typo.charAt(i - 1) == comparison.charAt(j - 1)) {
+                    cost = 0;
+                } else {
+                    cost = 1;
+                }
+
+                // checks the minimums for        deletion            insertion          substitution
+                dist[i][j] = Math.min(Math.min(dist[i - 1][j] + 1, dist[i][j - 1] + 1), dist[i - 1][j - 1] + cost);
+                // checks the minimum for transposition
+                if (i > 1 && j > 1 && typo.charAt(i - 1) == comparison.charAt(j - 2) && typo.charAt(i - 2) == comparison.charAt(j - 1)) {
+                    dist[i][j] = Math.min(dist[i][j], dist[i - 2][j - 2] + cost);
+                }
+            }
+        }
+        return dist[inputLength][comparisonLength];
     }
 
     public void prepareDictionary() {
-        int counter = 0;
+//        int counter = 0;
         try {
             Scanner reader = new Scanner(new File("src/resources/words.txt"));
 
@@ -52,11 +111,13 @@ public class Dictionary {
                 String word = reader.nextLine();
                 dictionary.add(word);
                 dictionaryWords.add(word);
-                counter++;
-                if (counter % 1000 == 0) {
-                    System.out.println(counter);
-                }
+//                counter++;
+//                if (counter % 1000 == 0) {
+//                    System.out.println(counter);
+//                }
             }
+            
+            reader.close();
         } catch (FileNotFoundException ex) {
             System.out.println(ex.getMessage());
         }

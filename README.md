@@ -17,6 +17,7 @@
 [Testausdokumentti](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/testausdokumentti.txt)
 
 ## Tiedostorakenne
+```
 
 ├── src
 │   └── main
@@ -34,3 +35,5 @@
 │   └── java
 │       ├── DictionaryTest.java
 │       └── TrieTest.java
+```
+

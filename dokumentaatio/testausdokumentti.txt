@@ -1,0 +1,8 @@
+Yksikkötestaus jacocolla rivikattavuus 93% ja haaraumakattavuus 85%. Main luokka on määritelty pois testauksen kohteista.
+
+Testauksessa katsotaan että ohjelma osaa tunnistaa sekä yksittäisiä että useita väärin kirjoitettuja sanoja, oikeiden sanojen ohella. Damerau-levenshtein 
+algoritmi testataan muunmuassa vaihtamalla a ja b stringien paikkoja sekä valmiiksi käsinlasketuilla etäisyystesteillä.
+
+Pienin syöte 0, pisin 16. Ohjelman toiminnallisuuden kannalta syötteiden suuruus ei ole erityisen suuri.
+
+Testit suoritetaan esimerkiksi komennolla $ gradle test

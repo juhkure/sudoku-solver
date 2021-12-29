@@ -12,3 +12,25 @@
 
 
 [Projektisuunnitelma](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/projektisuunnitelma.txt)
+
+
+[Testausdokumentti](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/testausdokumentti.txt)
+
+## Tiedostorakenne
+
+├── src
+│   └── main
+│       └── java
+│           ├── sanakirja
+│           │   ├── Dictionary.java
+│           │   ├── Trie.java
+│           │   └── TrieNode.java
+│           └── typo
+│               └── corrector
+│                   └── Main.java
+├── resources
+│   └── word.txt
+├── test
+│   └── java
+│       ├── DictionaryTest.java
+│       └── TrieTest.java

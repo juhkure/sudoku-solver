@@ -13,7 +13,6 @@ public class TrieNode {
 
     public TrieNode() {
         this.children = new HashMap<>();
-//        wordEnd = false;
     }
 
     public boolean isWordEnd() {
@@ -21,11 +20,7 @@ public class TrieNode {
     }
 
     public HashMap<Character, TrieNode> getChildren() {
-//        if (children.isEmpty()) {
-//            return null;
-//        } else {
-            return children;
-//        }
+        return children;
     }
 
     public void setWordEnd(boolean wordEnd) {

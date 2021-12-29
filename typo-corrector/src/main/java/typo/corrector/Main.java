@@ -25,19 +25,17 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         String repairable = scanner.nextLine();
-        
+
         Long startTime = System.nanoTime();
-        
 
         String repaired = dictionary.check(repairable);
-        
+
         Long stopTime = System.nanoTime();
 
         System.out.println("\nCorrected version: ");
         System.out.println(repaired);
-        
-        System.out.println("Time passed: " + (double)(stopTime - startTime)/1000000000 + " seconds");
 
+        System.out.println("Time passed: " + (double) (stopTime - startTime) / 1000000000 + " seconds");
     }
 
 }

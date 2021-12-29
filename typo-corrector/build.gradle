@@ -11,17 +11,31 @@ if (JavaVersion.current() != project.targetCompatibility) {
 mainClassName = 'typo.corrector.Main'
 
 repositories {
-    jcenter()
+    mavenCentral()
+}
+
+test {
+    finalizedBy jacocoTestReport
+}
+jacocoTestReport {
+    dependsOn test
+}
+
+jacoco {
+    toolVersion = "0.8.7"
 }
 
 jacocoTestReport {
     reports {
-        xml.enabled = true
-        html.enabled = true
+        xml.required = false
+        csv.required = false
+    }
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: 'typo/corrector**')
+        }))
     }
 }
-
-check.dependsOn jacocoTestReport
 
 dependencies {
     testImplementation 'junit:junit:4.13'
@@ -38,5 +52,5 @@ jar {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnit()
 }

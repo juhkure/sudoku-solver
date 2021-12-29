@@ -22,8 +22,12 @@ public class Dictionary {
         this.dictionary = new Trie();
         dictionaryWords = new ArrayList<>();
     }
-
+    
+    /*
+        Checks if words are included in dictionary, forwards unrecognized words to fix() if not
+    */
     public String check(String repairable) {
+        //first splits the inputted string of text into separated words
         String[] words = repairable.split(" ");
         String repaired = "";
         for (String word : words) {
@@ -39,6 +43,8 @@ public class Dictionary {
             if (!dictionary.containsWord(word)) {
                 word = fix(word);
             }
+
+            //adds the formerly removed punctuation mark
             if (isPunctuationMark) {
                 repaired += word + lastChar + " ";
             } else {
@@ -46,9 +52,12 @@ public class Dictionary {
             }
         }
 
-        return repaired;
+        return repaired.trim();
     }
 
+    /*
+        Receives a word that's unrecognized, loops it against all dictionary's words with distance() taking the lowest distance and returning it
+     */
     public String fix(String word) {
         int lowestDistance = Integer.MAX_VALUE;
         String fixedWord = "";
@@ -102,8 +111,10 @@ public class Dictionary {
         return dist[inputLength][comparisonLength];
     }
 
+    /*
+        Adds all words from the source file to a list
+     */
     public void prepareDictionary() {
-//        int counter = 0;
         try {
             Scanner reader = new Scanner(new File("src/resources/words.txt"));
 
@@ -111,17 +122,12 @@ public class Dictionary {
                 String word = reader.nextLine();
                 dictionary.add(word);
                 dictionaryWords.add(word);
-//                counter++;
-//                if (counter % 1000 == 0) {
-//                    System.out.println(counter);
-//                }
             }
-            
+
             reader.close();
         } catch (FileNotFoundException ex) {
             System.out.println(ex.getMessage());
         }
-
     }
 
 }

@@ -1,9 +1,8 @@
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.*;
 import sanakirja.Trie;
-import sanakirja.TrieNode;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,14 +13,40 @@ import sanakirja.TrieNode;
  *
  * @author juhku
  */
-public class DictionaryTest {
+public class TrieTest {
+
+    private Trie trie;
+
+    @Before
+    public void setup() {
+        trie = new Trie();
+    }
 
     @Test
-    public void addWordWorks() {
-        Trie trie = new Trie();
-
+    public void addWordOneWord() {
         trie.add("testing");
 
         assertTrue(trie.containsWord("testing"));
     }
+
+    @Test
+    public void contains() {
+        trie.add("testing");
+
+        assertTrue(trie.containsWord("testing"));
+    }
+
+    @Test
+    public void addMultipleWords() {
+        trie.add("testing");
+        trie.add("with");
+        trie.add("multiple");
+        trie.add("words");
+
+        assertTrue(trie.containsWord("testing"));
+        assertTrue(trie.containsWord("with"));
+        assertTrue(trie.containsWord("multiple"));
+        assertTrue(trie.containsWord("words"));
+    }
+
 }

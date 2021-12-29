@@ -39,3 +39,11 @@
 │       └── TrieTest.java
 ```
 
+
+Käytössä Gradle: 
+$ gradle run
+
+Testit sekä rivi- ja haaraumakattavuus jacocolla: 
+$ gradle test
+ja
+$ gradle jacocoTestReport

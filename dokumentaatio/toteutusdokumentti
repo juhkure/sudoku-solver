@@ -1,5 +1,5 @@
 Tiedostorakenne
-
+```
 ├── src
 │   └── main
 │       └── java
@@ -16,3 +16,4 @@ Tiedostorakenne
 │   └── java
 │       ├── DictionaryTest.java
 │       └── TrieTest.java
+```

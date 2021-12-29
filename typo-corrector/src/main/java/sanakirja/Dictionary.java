@@ -22,10 +22,10 @@ public class Dictionary {
         this.dictionary = new Trie();
         dictionaryWords = new ArrayList<>();
     }
-    
+
     /*
         Checks if words are included in dictionary, forwards unrecognized words to fix() if not
-    */
+     */
     public String check(String repairable) {
         //first splits the inputted string of text into separated words
         String[] words = repairable.split(" ");
@@ -82,6 +82,7 @@ public class Dictionary {
         int inputLength = typo.length();
         int comparisonLength = comparison.length();
 
+        // Creates a matrix which it uses to calculate the distance between two words.
         int[][] dist = new int[inputLength + 1][comparisonLength + 1];
         for (int i = 0; i < inputLength + 1; i++) {
             dist[i][0] = i;
@@ -90,6 +91,7 @@ public class Dictionary {
             dist[0][j] = j;
         }
 
+        // Loops all cells in the matrix
         for (int i = 1; i < inputLength + 1; i++) {
             for (int j = 1; j < comparisonLength + 1; j++) {
 
@@ -108,6 +110,8 @@ public class Dictionary {
                 }
             }
         }
+
+        // Returns the final cell in the matrix
         return dist[inputLength][comparisonLength];
     }
 

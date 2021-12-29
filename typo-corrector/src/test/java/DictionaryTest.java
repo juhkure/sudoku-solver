@@ -52,6 +52,7 @@ public class DictionaryTest {
     @Test
     public void distanceViceVersa() {
         assertTrue(dictionary.distance("", "aaaaa") == dictionary.distance("aaaaa", ""));
+        assertTrue(dictionary.distance("example", "") == dictionary.distance("example", ""));
     }
     
     @Test

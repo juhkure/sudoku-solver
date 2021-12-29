@@ -1,5 +1,18 @@
+Aika- ja tilavaativuudet määrittelydokumentin mukaisesti:
+Aikavaativuus: O(S*D*M*N) jossa S on syötteen pituus, D on sanakirjan pituus, M on pisin sana syötteessä ja N pisin sana sanakirjassa. 
+Tilavaativuus: O(S + D) jossa S on syötteen pituus, D on sanakirjan pituus.
+
+Työstä löytyy paljon puitteita mikäli käyttäjä haluaa hyvin toimivan kirjoitusvirheiden korjaajan. Tämä johtuu useista eri syistä. Käytetyn sanakirjan 
+suuruus (yli 500 tuhatta sanaa) aiheuttaa sen että ohjelma kyllä tunnistaa hyvin oikein kirjoitetun sanan, mutta vastaavasti voi korjata väärin kirjoitetun sanan 
+johonkin ei niin tunnettuun sanaan rikkoen lauseen merkityksen. Tämä vaatisi esimerkiksi sanojen tunnistusta muiden sanojen kontekstissa.
+
+Eri kirjoitusvirheiden painoarvoihin paneutuminen ja muokkaus olisi ehkä realistisin seuraava vaihe ohjelman parantamisessa. Tätä voisi vielä viedä pidemmälle 
+vertaamalla ja yhdistämällä painoarvot jokaisen kirjaimen ja muiden kirjainten välille suhteessa kirjainten sijaintiin näppäimistöllä. Esimerkiksi K kirjain 
+kirjoitetaan helpommin väärin kirjaimella L kuin kirjaimella F.
+
+
 Tiedostorakenne
-```
+
 ├── src
 │   └── main
 │       └── java
@@ -16,4 +29,6 @@ Tiedostorakenne
 │   └── java
 │       ├── DictionaryTest.java
 │       └── TrieTest.java
-```
+
+
+Lähteitä:

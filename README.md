@@ -16,6 +16,8 @@
 
 [Testausdokumentti](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/testausdokumentti.txt)
 
+[Toteutusdokumentti](https://github.com/juhkure/typo-corrector/blob/main/dokumentaatio/toteutusdokumentti)
+
 ## Tiedostorakenne
 ```
 
